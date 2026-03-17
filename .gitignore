@@ -31,3 +31,6 @@ status.txt
 Thumbs.db
 *.swp
 *.swo
+build/rpm/rpmbuild/SOURCES/limiz-1.0.0.tar.gz
+build/rpm/limiz-1.0.0-1.x86_64.rpm
+build/rpm/rpmbuild/RPMS/x86_64/limiz-1.0.0-1.x86_64.rpm

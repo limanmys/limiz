@@ -92,7 +92,7 @@ rm -rf %{buildroot}
 install -D -m 0755 limiz %{buildroot}/usr/local/bin/limiz
 
 # Servis dosyası
-install -D -m 0644 limiz.service %{buildroot}%{_unitdir}/limiz.service
+install -D -m 0644 limiz.service %{buildroot}/usr/lib/systemd/system/limiz.service
 
 # Config dizini ve varsayılan config
 install -d -m 0750 %{buildroot}/etc/limiz
@@ -133,7 +133,7 @@ fi
 
 %files
 %attr(0755, root, root) /usr/local/bin/limiz
-%{_unitdir}/limiz.service
+/usr/lib/systemd/system/limiz.service
 %dir %attr(0750, root, limiz) /etc/limiz
 %config(noreplace) %attr(0640, root, limiz) /etc/limiz/config.json
 %dir %attr(0750, limiz, limiz) /var/lib/limiz
