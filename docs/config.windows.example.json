@@ -1,0 +1,95 @@
+{
+  "listen_address": ":9110",
+
+  "tls": {
+    "cert_file": "C:/Program Files/limiz/certs/server.crt",
+    "key_file":  "C:/Program Files/limiz/certs/server.key",
+    "store_name": "Limiz"
+  },
+
+  "basic_auth": {
+    "username": "prometheus",
+    "password": "secret"
+  },
+
+  "local_write": {
+    "enabled":   true,
+    "interval":  "5m",
+    "db_path":   "C:/Program Files/limiz/metrics.db",
+    "rotate":    "24h",
+    "max_files": 5
+  },
+
+  "metrics": {
+    "path": "/metrics",
+    "cache": {
+      "enabled":  false,
+      "interval": "5m"
+    },
+    "plugins": {
+      "enabled":         true,
+      "dir":             "C:/Program Files/limiz/plugins/metric",
+      "default_timeout": "10s",
+      "items": [
+        {
+          "name":    "dir-size",
+          "exec":    "dir-size",
+          "args":    ["--path", "C:/inetpub/wwwroot", "--path", "C:/logs"],
+          "timeout": "30s",
+          "enabled": true
+        },
+        {
+          "name":    "gpu-info",
+          "exec":    "gpu-info",
+          "args":    [],
+          "timeout": "15s",
+          "enabled": false
+        },
+        {
+          "name":    "services",
+          "exec":    "services",
+          "args":    ["--state", "running"],
+          "timeout": "10s",
+          "enabled": false
+        }
+      ]
+    }
+  },
+
+  "datas": {
+    "enabled":    true,
+    "path":       "/datas",
+    "basic_auth": false,
+    "tls":        false,
+
+    "cache": {
+      "enabled":  true,
+      "interval": "30s"
+    },
+
+    "categories": {
+      "services":    true,
+      "packages":    { "enabled": true, "cache_interval": "10m" },
+      "updates":     { "enabled": true, "cache_interval": "30m" },
+      "disk_health": { "enabled": true, "cache_interval": "5m"  },
+      "hardware":    { "enabled": true, "cache_interval": "1h"  },
+      "os":          true,
+      "ports":       true
+    },
+
+    "plugins": {
+      "enabled":         true,
+      "dir":             "C:/Program Files/limiz/plugins/data",
+      "default_timeout": "15s",
+      "items": [
+        {
+          "name":           "folder-size",
+          "exec":           "folder-size",
+          "args":           ["--path", "C:/Logs", "--path", "C:/Temp"],
+          "cache_interval": "10m",
+          "enabled":        true
+        }
+      ]
+    }
+  }
+}

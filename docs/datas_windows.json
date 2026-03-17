@@ -1,0 +1,186 @@
+{
+  "timestamp": "2026-03-16T06:42:36Z",
+  "services": [
+    {
+      "name": "wuauserv",
+      "display_name": "Windows Update",
+      "status_code": 4,
+      "status": "Running",
+      "start_type_code": 3,
+      "start_type": "Manual"
+    },
+    {
+      "name": "WinDefend",
+      "display_name": "Microsoft Defender Antivirus Service",
+      "status_code": 4,
+      "status": "Running",
+      "start_type_code": 2,
+      "start_type": "Automatic"
+    },
+    {
+      "name": "Spooler",
+      "display_name": "Print Spooler",
+      "status_code": 4,
+      "status": "Running",
+      "start_type_code": 2,
+      "start_type": "Automatic"
+    },
+    {
+      "name": "limiz",
+      "display_name": "Limiz Exporter",
+      "status_code": 4,
+      "status": "Running",
+      "start_type_code": 2,
+      "start_type": "Automatic"
+    },
+    {
+      "name": "W32Time",
+      "display_name": "Windows Time",
+      "status_code": 4,
+      "status": "Running",
+      "start_type_code": 3,
+      "start_type": "Manual"
+    },
+    {
+      "name": "SSDPSRV",
+      "display_name": "SSDP Discovery",
+      "status_code": 1,
+      "status": "Stopped",
+      "start_type_code": 4,
+      "start_type": "Disabled"
+    },
+    {
+      "name": "RemoteRegistry",
+      "display_name": "Remote Registry",
+      "status_code": 1,
+      "status": "Stopped",
+      "start_type_code": 4,
+      "start_type": "Disabled"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Google Chrome",
+      "version": "123.0.6312.106"
+    },
+    {
+      "name": "Microsoft Visual C++ 2015-2022 Redistributable (x64)",
+      "version": "14.38.33135"
+    },
+    {
+      "name": "7-Zip 24.05 (x64)",
+      "version": "24.05"
+    },
+    {
+      "name": "Notepad++ (64-bit x64)",
+      "version": "8.6.4"
+    },
+    {
+      "name": "Microsoft .NET Runtime - 8.0.3 (x64)",
+      "version": "8.0.3.28405"
+    },
+    {
+      "name": "Python 3.12.2 (64-bit)",
+      "version": "3.12.2150.0"
+    }
+  ],
+  "updates": [
+    {
+      "title": "2026-03 Cumulative Update for Windows Server 2022 for x64-based Systems (KB5035857)"
+    },
+    {
+      "title": "2026-03 Cumulative Update for .NET Framework 4.8.1 for Windows Server 2022 (KB5034618)"
+    }
+  ],
+  "disk_health": [
+    {
+      "device_id": "0",
+      "model": "Samsung SSD 870 EVO 500GB",
+      "media_type_code": 4,
+      "media_type": "SSD",
+      "health_status": "Healthy",
+      "size_bytes": 500107862016
+    },
+    {
+      "device_id": "1",
+      "model": "WDC WD2003FZEX-00SRLA0",
+      "media_type_code": 3,
+      "media_type": "HDD",
+      "health_status": "Healthy",
+      "size_bytes": 2000398934016
+    }
+  ],
+  "hardware": {
+    "hostname": "WIN-SERVER-01",
+    "cpu_model": "Intel(R) Xeon(R) E-2388G CPU @ 3.20GHz",
+    "cpu_cores": 16,
+    "total_memory": "31.8 GB",
+    "manufacturer": "Dell Inc.",
+    "model": "PowerEdge T150",
+    "serial": "ABCD1234567",
+    "bios_vendor": "Dell Inc.",
+    "bios_version": "2.18.1"
+  },
+  "os": {
+    "name": "Microsoft Windows Server 2022 Standard",
+    "version": "10.0.20348",
+    "build": "20348",
+    "arch": "64-bit"
+  },
+  "ports": [
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 135,
+      "pid": 1120,
+      "process": "svchost",
+      "state": "LISTEN"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 445,
+      "pid": 4,
+      "process": "System",
+      "state": "LISTEN"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 3389,
+      "pid": 1876,
+      "process": "svchost",
+      "state": "LISTEN"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 5985,
+      "pid": 4,
+      "process": "System",
+      "state": "LISTEN"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 9110,
+      "pid": 7890,
+      "process": "limiz",
+      "state": "LISTEN"
+    },
+    {
+      "protocol": "udp",
+      "address": "0.0.0.0",
+      "port": 123,
+      "pid": 2456,
+      "process": "svchost"
+    },
+    {
+      "protocol": "udp",
+      "address": "0.0.0.0",
+      "port": 500,
+      "pid": 1032,
+      "process": "lsass"
+    }
+  ]
+}

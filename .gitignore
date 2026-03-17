@@ -1,0 +1,33 @@
+# Compiled binaries
+limiz
+limiz.exe
+setup.exe
+setup/limiz.exe
+
+# Plugin binaries and signatures
+plugins/metric/*
+plugins/data/*
+!plugins/metric/.gitkeep
+!plugins/data/.gitkeep
+
+# Build artifacts
+build/deb/*.deb
+build/deb/limiz_*/
+
+# Private signing key — NEVER commit the private key
+keys/plugin-signing.key
+
+# Local metric databases
+*.db
+*.db-wal
+*.db-shm
+
+# Runtime files
+*.jsonl
+status.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
