@@ -1,0 +1,210 @@
+{
+  "timestamp": "2026-03-16T06:42:36Z",
+  "services": [
+    {
+      "name": "accounts-daemon",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "Accounts Service"
+    },
+    {
+      "name": "cron",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "Regular background program processing daemon"
+    },
+    {
+      "name": "dbus",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "D-Bus System Message Bus"
+    },
+    {
+      "name": "limiz",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "Limiz Exporter"
+    },
+    {
+      "name": "networkd-dispatcher",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "Dispatcher daemon for systemd-networkd"
+    },
+    {
+      "name": "nginx",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "A high performance web server and a reverse proxy server"
+    },
+    {
+      "name": "ssh",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "running",
+      "description": "OpenBSD Secure Shell server"
+    },
+    {
+      "name": "ufw",
+      "load_state": "loaded",
+      "active_state": "active",
+      "sub_state": "exited",
+      "description": "Uncomplicated firewall"
+    }
+  ],
+  "packages": [
+    {
+      "name": "bash",
+      "version": "5.2.21-2ubuntu4",
+      "arch": "amd64"
+    },
+    {
+      "name": "coreutils",
+      "version": "9.4-3ubuntu6",
+      "arch": "amd64"
+    },
+    {
+      "name": "curl",
+      "version": "8.5.0-2ubuntu10.6",
+      "arch": "amd64"
+    },
+    {
+      "name": "nginx",
+      "version": "1.24.0-2ubuntu7",
+      "arch": "amd64"
+    },
+    {
+      "name": "openssh-server",
+      "version": "1:9.6p1-3ubuntu13.5",
+      "arch": "amd64"
+    },
+    {
+      "name": "openssl",
+      "version": "3.0.13-0ubuntu3.4",
+      "arch": "amd64"
+    },
+    {
+      "name": "python3",
+      "version": "3.12.3-0ubuntu2",
+      "arch": "amd64"
+    },
+    {
+      "name": "systemd",
+      "version": "255.4-1ubuntu8.4",
+      "arch": "amd64"
+    }
+  ],
+  "updates": [
+    {
+      "name": "libssl3t64",
+      "current": "3.0.13-0ubuntu3.3",
+      "candidate": "3.0.13-0ubuntu3.4",
+      "arch": "amd64"
+    },
+    {
+      "name": "openssl",
+      "current": "3.0.13-0ubuntu3.3",
+      "candidate": "3.0.13-0ubuntu3.4",
+      "arch": "amd64"
+    },
+    {
+      "name": "linux-image-6.8.0-55-generic",
+      "current": "(none)",
+      "candidate": "6.8.0-55.57",
+      "arch": "amd64"
+    }
+  ],
+  "disk_health": [
+    {
+      "device": "/dev/sda",
+      "model": "Samsung SSD 870 EVO 500GB",
+      "serial": "S5Y1NJ0R123456",
+      "smart_status": "PASSED",
+      "temperature": "34°C",
+      "power_on_hours": 8760,
+      "reallocated_sectors": 0
+    },
+    {
+      "device": "/dev/nvme0n1",
+      "model": "Samsung 980 PRO 1TB",
+      "serial": "S5GXNE0R654321"
+    }
+  ],
+  "hardware": {
+    "hostname": "web-server-01",
+    "architecture": "amd64",
+    "cpu_model": "Intel(R) Xeon(R) E-2388G CPU @ 3.20GHz",
+    "cpu_cores": 16,
+    "total_memory": "31.3 GB",
+    "board_vendor": "Supermicro",
+    "board_name": "X12STH-F",
+    "bios_vendor": "American Megatrends International, LLC.",
+    "bios_version": "2.1",
+    "product_name": "SYS-510T-M",
+    "machine_id": "a1b2c3d4e5f6789012345678abcdef01"
+  },
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.2 LTS (Noble Numbat)",
+    "id": "ubuntu",
+    "pretty_name": "Ubuntu 24.04.2 LTS",
+    "kernel": "6.8.0-50-generic"
+  },
+  "ports": [
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 22,
+      "pid": 1234,
+      "process": "sshd"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 80,
+      "pid": 5678,
+      "process": "nginx"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 443,
+      "pid": 5678,
+      "process": "nginx"
+    },
+    {
+      "protocol": "tcp",
+      "address": "127.0.0.1",
+      "port": 5432,
+      "pid": 9012,
+      "process": "postgres"
+    },
+    {
+      "protocol": "tcp",
+      "address": "0.0.0.0",
+      "port": 9110,
+      "pid": 3456,
+      "process": "limiz"
+    },
+    {
+      "protocol": "udp",
+      "address": "127.0.0.53",
+      "port": 53,
+      "pid": 789,
+      "process": "systemd-resolve"
+    },
+    {
+      "protocol": "udp",
+      "address": "0.0.0.0",
+      "port": 68,
+      "pid": 890,
+      "process": "dhclient"
+    }
+  ]
+}

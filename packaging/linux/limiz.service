@@ -1,0 +1,38 @@
+[Unit]
+Description=Limiz - Prometheus system metrics exporter
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=limiz
+Group=limiz
+ExecStart=/usr/local/bin/limiz
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+
+# Güvenlik sıkılaştırması
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+ReadOnlyPaths=/proc
+ReadWritePaths=/var/lib/limiz
+RestrictSUIDSGID=yes
+LockPersonality=yes
+
+# SQLite local write için state dizini
+StateDirectory=limiz
+
+# Loglama
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=limiz
+
+[Install]
+WantedBy=multi-user.target
